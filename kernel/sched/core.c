@@ -2163,6 +2163,10 @@ static void __sched_fork(unsigned long clone_flags, struct task_struct *p)
 	p->se.prev_sum_exec_runtime	= 0;
 	p->se.nr_migrations		= 0;
 	p->se.vruntime			= 0;
+
+	//for cpu cycle
+	p->se.exec_start_cycle		= 0;
+	p->se.sum_exec_cycle		= 0;
 #ifdef CONFIG_HPERF_HMP
 	p->se.druntime			= 0;
 #endif

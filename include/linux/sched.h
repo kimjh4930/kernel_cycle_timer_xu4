@@ -397,6 +397,9 @@ struct sched_entity {
 
 	u64				nr_migrations;
 
+	u64				exec_start_cycle;
+	u64				sum_exec_cycle;
+
 	struct sched_statistics		statistics;
 
 #ifdef CONFIG_FAIR_GROUP_SCHED
